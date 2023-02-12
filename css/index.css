@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root{
+  --Blue: hsl(223, 87%, 63%);
+  --PaleBlue: hsl(223, 100%, 88%);
+  --LightRed: hsl(354, 100%, 66%);
+  --VeryDarkBlue: hsl(209, 33%, 12%);
+  --Gray: hsl(0, 0%, 59%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  width: 100%;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+main{
+  width: calc(100% - 15% );
+  margin-inline: auto;
+  text-align: center;
+}
+
+.logo{
+  display: block;
+  margin-inline: auto;
+  width: 80px;
+}
+
+main h1{
+  font-weight: 400;
+  color: var(--Gray);
+  padding-block-start: 4rem;
+  padding-block-end: 2rem;
+  font-size: 3.25rem;
+}
+
+main h1 span{
+  font-weight: 700;
+  color:var(--VeryDarkBlue)
+}
+
+main p{
+  font-weight: 300;
+}
+
+.form{
+  max-width: 38rem;
+  margin-inline: auto;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form input{
+  padding: 1.5rem 3rem;
+  border-radius: 2.5rem;
+  border: 1px solid var(--PaleBlue);
+}
+
+.form input::placeholder{
+  color: var(--PaleBlue);
+}
+
+.form small{
+  display: block;
+  margin-block: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--LightRed);
+  font-weight: 500;
+  opacity: 0;
+}
+
+.form.error small{
+  opacity: 1;
+}
+
+.form small{
+  opacity: 0;
+}
+
+.form button{
+  padding: 1.6rem;
+  border-radius: 2.8rem;
+  color :white;
+  background-color: var(--Blue);
+  font-weight: 700;
+  font-size: 1.25rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: -1px 5px 11px -3px  var(--PaleBlue);
+-webkit-box-shadow: -1px 5px 11px -3px var(--PaleBlue) ;
+-moz-box-shadow: -1px 5px 11px -3px var(--PaleBlue) ;
+
+  transition: background-color .2s ease;
+}
+
+.form button:hover{
+  background-color: var(--PaleBlue);
+}
+
+.dashboard{
+  margin-block-start:8rem;
+  max-width: 60rem;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+  font-size: 1.25rem;
+}
+
+.footer__icons{
+  display: flex;
+  gap: 2rem;
+  font-size: 1.6rem;
+  color: var(--Blue);
+}
+.footer__icons i{
+  border: 1px solid var(--PaleBlue);
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color .2s ease-in;
+}
+
+.footer__icons i:nth-child(1){
+  padding-inline: 1.2rem;
+}
+.footer__icons i:hover{
+  background-color: var(--Blue);
+  color: white;
+  border: 1px solid transparent;
+}
+footer p{
+  color: var(--Gray);
+}
+
+@media (min-width:920px){
+  .form{
+    max-width: 60rem;
+    flex-direction: row;
+    gap: 1.5rem;
+    position: relative;
+  }
+  .form input{
+    width: 65%;
+  }
+  .form button{
+    flex: 1;
+  }
+  
+  .form small{
+    position: absolute;
+    bottom: -35px;
+  }
+}
