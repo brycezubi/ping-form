@@ -24,7 +24,7 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 
 ### Screenshot
 
-![Design preview for the Ping Single Column Page coding challenge](https://github.com/Orisabiyi/qr-component-code/blob/main/design/desktop-preview.jpg)
+![Design preview for the Ping Single Column Page coding challenge](https://github.com/brycezubi/ping-form/blob/main/design/desktop-preview.jpg)
 
 ### Links
 
